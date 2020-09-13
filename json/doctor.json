@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Иван Васильевич",
+        "speciality" : "Терапевт",
+        "time_from": "12-00",
+        "time_to": "19-00"
+    },
+    {
+        "name": "Сергей Петрович",
+        "speciality" : "Ортопед",
+        "time_from": "8-00",
+        "time_to": "11-00"
+    },
+    {
+        "name": "Анна Рязанцева",
+        "speciality" : "Акушер",
+        "working": false
+    }
+]
