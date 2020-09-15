@@ -14,4 +14,26 @@ console.log( exists ); // вернет true или false
 let expression2 = new RegExp( '( \\d{4} )' );
 let exists2 = expression2.test( text );
 // .$1 первое вхождение
-console.log( exists2, RegExp.$1 ); // вернет true или false
+console.log( exists2, RegExp.$1 );
+
+let expression3 = new RegExp( '(\\d{2}).*(\\d{4})' );
+// где точка - любой символ
+// * - любое количество символов между d{2} и d{4}
+let exists3 = expression3.test( text );
+console.log( exists3, RegExp.$1, RegExp.$2 );
+
+// Замена символов с помощью регулярных выражений и их флагов
+// У строки есть метод replace, но он заменит только первое вхождение
+let text2 = 'Исполнительный; Обязательный; Задорный';
+// В RegExp есть флаги
+// 'g' - глобалный поиск (имеется ввиду несколько вхождений)
+// без этого флага будет отрабатываться также только первое вхождение
+// флаг 'i' - поиск без учета регистра
+// флаг 'm' - многострочный поиск (если есть переносы \n)
+// совмещение флагов 'gm' или даже 'gim'
+let expression4 = new RegExp( ';', 'g' );
+let newText = text2.replace( expression4, '.');
+console.log(newText);
+
+// Замена символов с помощью литералов
+let text3 = 'Исполнительный; Обязательный; Задорный';
