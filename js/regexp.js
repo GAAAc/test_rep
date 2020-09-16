@@ -37,3 +37,15 @@ console.log(newText);
 
 // Замена символов с помощью литералов
 let text3 = 'Исполнительный; Обязательный; Задорный';
+let expression5 = /;/g; // флаги теже
+// В литерале надо писать один слеш в конструкции \d{2}
+// Поиск слеша экранируется знаком \ и получается \/
+// Поиск точки также экранируется \.
+let newText2 = text3.replace( expression5, '_');
+console.log(newText2);
+
+// Метод exec - получим информацию о всех вхождениях
+let mailAdd = 'test@example.com';
+let expression6 = /\w+@\w+\.\w+/; // Пробелы нельзя иначе они туже будут искаться
+let results = expression6.exec( mailAdd );
+console.log( results );
