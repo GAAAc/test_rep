@@ -5,9 +5,9 @@
 
 const Draggable = function( element ) {
     this.element = element;
-    this.dragstart = this.dragstart.bind( this );
-    this.drag = this.drag.bind( this );
-    this.dragend = this.dragend.bind( this );
+    this.dragstart = this.dragstart.bind( this ); // сохраняем контекст
+    this.drag = this.drag.bind( this ); // сохраняем контекст
+    this.dragend = this.dragend.bind( this ); // сохраняем контекст
 
     this.bindEvents();
 };

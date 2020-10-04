@@ -1,7 +1,7 @@
 'use strict'
 
 const loadSchedule = function() {
-    // todo Создадим экземплря XMLHttpRequest объкта
+    // todo Создадим экземплря XMLHttpRequest объекта
     const xhr = new XMLHttpRequest;
     
     xhr.open('GET', "json/doctor.json");
