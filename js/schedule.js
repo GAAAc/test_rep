@@ -11,12 +11,20 @@ const loadSchedule = function() {
             return;
         }
         const data = xhr.response;
-        for(let i = 0, len = data.length; i < len; i++) {
-            const scheduleItem = data[i],
-                item = document.createElement('li');
-            item.textContent = scheduleItem['name'] + '(' + scheduleItem['speciality'] + ')';
+
+        data.map(key => {
+            const item = document.createElement('li');
+            item.textContent = key['name'] + '(' + key['speciality'] + ')';
             scheduleListContent.appendChild(item);
-        }
+        })
+
+
+        // for(let i = 0, len = data.length; i < len; i++) {
+        //     const scheduleItem = data[i],
+        //         item = document.createElement('li');
+        //     item.textContent = scheduleItem['name'] + '(' + scheduleItem['speciality'] + ')';
+        //     scheduleListContent.appendChild(item);
+        // }
     }
     xhr.send();
 }
