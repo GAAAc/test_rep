@@ -16,15 +16,7 @@ const loadSchedule = function() {
             const item = document.createElement('li');
             item.textContent = key['name'] + '(' + key['speciality'] + ')';
             scheduleListContent.appendChild(item);
-        })
-
-
-        // for(let i = 0, len = data.length; i < len; i++) {
-        //     const scheduleItem = data[i],
-        //         item = document.createElement('li');
-        //     item.textContent = scheduleItem['name'] + '(' + scheduleItem['speciality'] + ')';
-        //     scheduleListContent.appendChild(item);
-        // }
+        });
     }
     xhr.send();
 }
